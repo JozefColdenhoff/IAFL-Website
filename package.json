@@ -49,34 +49,34 @@
             },
             "background_color": {
                 "type": "color",
-                "default": "#faf6e9"
+                "default": "#ffffff"
             },
             "navigation_layout": {
                 "type": "select",
                 "options": ["Logo on the left", "Logo in the middle", "Stacked"],
-                "default": "Logo in the middle"
+                "default": "Logo on the left"
             },
             "email_signup_text": {
                 "type": "text",
-                "default": "Subscribe for daily recipes. No spam, just food."
+                "default": ""
             },
             "footer_text": {
                 "type": "text"
             },
             "primary_header": {
                 "type": "text",
-                "default": "Delicious meals in under 15 minutes",
+                "default": "Incompetent Amateurs From Lausanne",
                 "group": "homepage"
             },
             "secondary_header": {
                 "type": "text",
-                "default": "A new recipe everyday, directly in your inbox.",
+                "default": "Outlandish stories from incompetent mountaineers",
                 "group": "homepage"
             },
             "header_action": {
                 "type": "select",
                 "options": ["Subscribe", "Search", "No action"],
-                "default": "Subscribe",
+                "default": "Search",
                 "group": "homepage"
             },
             "enter_tag_slugs_for_homepage_sections": {
