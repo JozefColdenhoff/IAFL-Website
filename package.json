@@ -1,110 +1,80 @@
 {
     "name": "iafl",
-    "description": "A Ghost theme",
+    "description": "The iafl theme",
     "version": "1.0.0",
-    "private": true,
     "engines": {
         "ghost": ">=5.0.0"
     },
     "license": "GPL-3.0-only",
+    "scripts": {
+        "dev": "rollup -c --environment BUILD:development -w",
+        "build": "rollup -c --environment BUILD:production",
+        "zip": "npm run build && bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
+        "test": "npx gscan .",
+        "pretest": "npm run build"
+    },
     "author": {
-        "name": "aifl",
-        "email": "incompetent.amateurs.lausanne@gmail.com",
-        "url": "iafl.ch"
+        "name": "iafl",
+        "email": "",
+        "url": "https://iafl.ch/"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Magazine"
+        ]
     },
     "keywords": [
         "ghost",
         "theme",
         "ghost-theme"
     ],
-    "docs": "https://taste.ghost.io/about/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TryGhost/Starter.git"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.21.0",
+        "@babel/preset-env": "^7.20.2",
+        "@rollup/plugin-babel": "^6.0.3",
+        "@rollup/plugin-commonjs": "^25.0.0",
+        "@rollup/plugin-node-resolve": "^15.0.1",
+        "@rollup/plugin-terser": "^0.4.0",
+        "bestzip": "^2.2.1",
+        "postcss": "^8.4.24",
+        "postcss-import": "^15.1.0",
+        "postcss-preset-env": "^8.0.1",
+        "rollup": "^3.18.0",
+        "rollup-plugin-livereload": "^2.0.5",
+        "rollup-plugin-postcss": "^4.0.2"
+    },
+    "browserslist": [
+        "defaults"
+    ],
     "config": {
-        "posts_per_page": 12,
+        "card_assets": true,
+        "posts_per_page": 15,
         "image_sizes": {
+            "xxs": {
+                "width": 30
+            },
             "xs": {
-                "width": 150
+                "width": 100
             },
             "s": {
                 "width": 300
             },
             "m": {
-                "width": 720
+                "width": 600
             },
             "l": {
-                "width": 960
-            },
-            "xl": {
                 "width": 1200
             },
-            "xxl": {
+            "xl": {
                 "width": 2000
-            }
-        },
-        "card_assets": true,
-        "custom": {
-            "style": {
-                "type": "select",
-                "options": ["Elegant", "Playful"],
-                "default": "Elegant"
-            },
-            "background_color": {
-                "type": "color",
-                "default": "#ffffff"
-            },
-            "navigation_layout": {
-                "type": "select",
-                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
-                "default": "Logo on the left"
-            },
-            "email_signup_text": {
-                "type": "text",
-                "default": ""
-            },
-            "footer_text": {
-                "type": "text"
-            },
-            "primary_header": {
-                "type": "text",
-                "default": "Incompetent Amateurs From Lausanne",
-                "group": "homepage"
-            },
-            "secondary_header": {
-                "type": "text",
-                "default": "Outlandish stories from incompetent mountaineers",
-                "group": "homepage"
-            },
-            "header_action": {
-                "type": "select",
-                "options": ["Subscribe", "Search", "No action"],
-                "default": "Search",
-                "group": "homepage"
-            },
-            "enter_tag_slugs_for_homepage_sections": {
-                "type": "text",
-                "group": "homepage"
             }
         }
     },
-    "scripts": {
-        "dev": "gulp",
-        "test": "gscan .",
-        "zip": "gulp zip"
-    },
-    "devDependencies": {
-        "@tryghost/shared-theme-assets": "2.5.0",
-        "autoprefixer": "10.4.21",
-        "beeper": "2.1.0",
-        "cssnano": "7.0.6",
-        "gscan": "4.48.0",
-        "gulp": "5.0.0",
-        "gulp-concat": "2.6.1",
-        "gulp-livereload": "4.0.2",
-        "gulp-postcss": "10.0.0",
-        "gulp-uglify": "3.0.2",
-        "gulp-zip": "5.1.0",
-        "ordered-read-streams": "2.0.0",
-        "postcss": "8.5.3",
-        "postcss-easy-import": "4.0.0",
-        "pump": "3.0.2"
-    }
+    "type": "module"
 }
