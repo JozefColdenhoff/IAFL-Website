@@ -58,6 +58,16 @@
         <div class="gh-post-authors">
             <strong>Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}</strong>
         </div>
+        <div class="gh-post-tags">
+            {{#if tags}}
+                <p>
+                    {{#foreach tags}}
+                        <a class="gh-article-tag" href="{{url}}">{{name}}</a>
+                    {{/foreach}}
+                </p>
+            {{/if}}
+        </div>
+
     </header>
 
     <div class="gh-content gh-canvas">

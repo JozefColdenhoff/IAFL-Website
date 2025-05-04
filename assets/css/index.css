@@ -192,10 +192,30 @@ html,
     text-align: center;
 }
 
-.gh-header > .gh-post-authors{
+.gh-header > .gh-post-authors {
     text-align: left;
     padding-top: 2em;
     font-size: 2rem;
+}
+
+.gh-header > .gh-post-tags {
+    text-align: left;
+    text-transform: lowercase;
+    line-height: 2rem;
+    padding-top: 1em;
+    font-size: 2rem;
+}
+
+.gh-header > .gh-post-tags a {
+    text-decoration: underline;
+    background-color: color-mix(in srgb , var(--color-bg) 95%, var(--color-base));
+    color: var(--color-primary);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1.1rem;
+    margin-right: 0.5rem;
 }
 
 .gh-post-meta {
