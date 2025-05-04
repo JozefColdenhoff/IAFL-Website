@@ -192,6 +192,12 @@ html,
     text-align: center;
 }
 
+.gh-header > .gh-post-authors{
+    text-align: left;
+    padding-top: 2em;
+    font-size: 2rem;
+}
+
 .gh-post-meta {
     display: block;
     margin: 0 0 1rem;

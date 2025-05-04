@@ -55,6 +55,9 @@
             {{/if}}
         </figure>
         {{/if}}
+        <div class="gh-post-authors">
+            <strong>Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}</strong>
+        </div>
     </header>
 
     <div class="gh-content gh-canvas">
@@ -63,9 +66,7 @@
 
     <footer class="gh-footer gh-canvas">
 
-        <div class="gh-post-authors">
-            Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
-        </div>
+
 
         {{#if comments}}
         <section class="gh-post-comments">
